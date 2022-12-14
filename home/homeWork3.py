@@ -79,5 +79,40 @@ Villain.crit(Air_h.damage)
 
 
 
+class Bank:
+    def __init__(self, name, balance):
+        self._name = name
+        self._balance = balance
+
+    def moneyX(self):
+        self._balance += int(input('Введите сумму: '))
+
+
+    def _kill(self):
+        self._balance = 0
+
+
+    def __jackpot(self):
+        self._balance *= 10
+
+
+    def _unite(self, other):
+        print(self._balance + other._balance)
+
+    def _nalogi(self, other):
+        self._balance += other._balance
+        other._balance = 0
+
+
+m = Bank('Farhat', 600)
+n = Bank('Rafshan', 400)
+# m.moneyX()
+# m._kill()
+# m._Bank__jackpot()
+m._unite(n)
+m._nalogi(n)
+print(m._balance)
+print(n._balance)
+# print(e)
 
 
